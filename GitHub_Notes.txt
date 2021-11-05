@@ -39,6 +39,15 @@ The period refers to the current directory and can be used as a shortcut to refe
 -> git add . 
 
 -- To make a commit 
+-> git commit
+
+-- To setup your choice of code editor for commit's
+-> git config --global core.editor "code --wait"
+
+-- Bypass The Editor With The -m Flag
+-> git commit -m "Initial Commit"
+
+
 
 
 
