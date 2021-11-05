@@ -1,0 +1,44 @@
+--- Create a new repository and uploading an existing Project to Hub
+
+1. Open cmd, go to the working directory
+2. Initialize a git local repo   git init. If any existing git repo is there and to delete it cmd-> rv .git S/Q/
+3. Type git init
+4. git add .  ( To add all the files to local .git )
+5. Now create a new Git repository by going to the github.com
+6. to upload the project to this new/existing repo -> git remote add origin <URL>
+7. Push is to master branch -> git push -u origin master
+
+All the files are upload to the Hub. 
+
+
+
+-- To check the Git log
+1. git log
+2. git log --oneline ( To get list of logs as one liner)
+3. git log --stat
+    This command:
+    displays the file(s) that have been modified
+    displays the number of lines that have been added/removed
+    displays a summary line with the total number of modified files and lines that have been added/removed
+
+-- Get out of Git log list -> Press q key
+
+-- To display actual changes made 
+The git log command has a flag that can be used to display the actual changes made to a file. The flag is --patch which can be shortened to just -p:
+-> git log -p
+
+-- If you know the SHA use the below command to view the changes made in particular commit 
+->git log -p fdf5493
+Equivalent cmd -> git show SHAcode
+
+-- To remove files of the commit made, which are not moved yet and are in the staging area.
+->git rm --cached  (will not destroy any of your work; it just removes it from the Staging Index.)
+
+-- The Period .
+The period refers to the current directory and can be used as a shortcut to refer to all files and directories (including all nested files and directories!).
+-> git add . 
+
+-- To make a commit 
+
+
+
