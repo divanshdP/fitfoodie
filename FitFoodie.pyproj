@@ -1,0 +1,271 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>FitFoodie</Name>
+    <RootNamespace>FitFoodie</RootNamespace>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
+    <SuppressPackageInstallationPrompt>True</SuppressPackageInstallationPrompt>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>7290c363-e2b7-4d2f-9b6a-934a86d15139</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>FitFoodie.settings</DjangoSettingsModule>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app\admin.py" />
+    <Compile Include="app\apps.py" />
+    <Compile Include="app\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\migrations\0001_initial.py" />
+    <Compile Include="app\models.py" />
+    <Compile Include="app\tests.py" />
+    <Compile Include="app\views.py" />
+    <Compile Include="app\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="FitFoodie\__init__.py" />
+    <Compile Include="FitFoodie\settings.py" />
+    <Compile Include="FitFoodie\urls.py" />
+    <Compile Include="FitFoodie\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\static\css\about.css" />
+    <Content Include="app\static\css\base.css" />
+    <Content Include="app\static\css\bootstrap-theme.css" />
+    <Content Include="app\static\css\bootstrap-theme.min.css" />
+    <Content Include="app\static\css\bootstrap.css" />
+    <Content Include="app\static\css\bootstrap.min.css" />
+    <Content Include="app\static\css\bootstrap4\bootstrap.min.css" />
+    <Content Include="app\static\css\cart.css" />
+    <Content Include="app\static\css\FitFoodie.css" />
+    <Content Include="app\static\css\gallery.css" />
+    <Content Include="app\static\css\jquery-ui-1.10.3.custom.css" />
+    <Content Include="app\static\css\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="app\static\css\login.css" />
+    <Content Include="app\static\css\mail.css" />
+    <Content Include="app\static\css\menu.css" />
+    <Content Include="app\static\css\restaurants.css" />
+    <Content Include="app\static\css\signup.css" />
+    <Content Include="app\static\css\userprofile.css" />
+    <Content Include="app\static\images\3.jpg" />
+    <Content Include="app\static\images\560-5606982_download-hd-carrots-png-carrot-clip-art-transparent.jpg" />
+    <Content Include="app\static\images\5MZ9sDlH_400x400.jpg" />
+    <Content Include="app\static\images\arrow-down-dark.png" />
+    <Content Include="app\static\images\arrow-down.png" />
+    <Content Include="app\static\images\Backup_of_logo.cdr" />
+    <Content Include="app\static\images\barista.jpg" />
+    <Content Include="app\static\images\bg.jpg" />
+    <Content Include="app\static\images\bg1.jpg" />
+    <Content Include="app\static\images\bgblack.jpg" />
+    <Content Include="app\static\images\bggallery.jpg" />
+    <Content Include="app\static\images\bggalleryblack.jpg" />
+    <Content Include="app\static\images\bglogin.jpg" />
+    <Content Include="app\static\images\bgloginblack.jpg" />
+    <Content Include="app\static\images\bgmenu.jpg" />
+    <Content Include="app\static\images\bgrest.jpg" />
+    <Content Include="app\static\images\bgrestblack.jpg" />
+    <Content Include="app\static\images\burger.jpg" />
+    <Content Include="app\static\images\cafelatte.jpg" />
+    <Content Include="app\static\images\cappuccino.jpg" />
+    <Content Include="app\static\images\carrot.png" />
+    <Content Include="app\static\images\carrot1.png" />
+    <Content Include="app\static\images\catby_burgers.jpg" />
+    <Content Include="app\static\images\catby_drinks.jpg" />
+    <Content Include="app\static\images\catby_pizza.jpg" />
+    <Content Include="app\static\images\catby_sweet.jpg" />
+    <Content Include="app\static\images\chef-hat.png" />
+    <Content Include="app\static\images\chocolate.jpg" />
+    <Content Include="app\static\images\chocolava.jpg" />
+    <Content Include="app\static\images\chocolava.png" />
+    <Content Include="app\static\images\comingsoon.gif" />
+    <Content Include="app\static\images\dominos.jpg" />
+    <Content Include="app\static\images\drink.jpg" />
+    <Content Include="app\static\images\emptycart.png" />
+    <Content Include="app\static\images\empty_state.png" />
+    <Content Include="app\static\images\female_avtar.png" />
+    <Content Include="app\static\images\finallogo.png" />
+    <Content Include="app\static\images\finallogodarkoutline.png" />
+    <Content Include="app\static\images\finallogodarkoutlinewithoutkanta.png" />
+    <Content Include="app\static\images\fitfoodielogo.png" />
+    <Content Include="app\static\images\fitfoodielogocolored.png" />
+    <Content Include="app\static\images\fitfoodielogodarkcolor.png" />
+    <Content Include="app\static\images\fitfoodielogowhite.png" />
+    <Content Include="app\static\images\FitFoodieMommy_FinalLogo-white-background.jpg" />
+    <Content Include="app\static\images\fitlogo.png" />
+    <Content Include="app\static\images\foodie_logo.png" />
+    <Content Include="app\static\images\foodquote.jpg" />
+    <Content Include="app\static\images\foodquotewal.jpg" />
+    <Content Include="app\static\images\gallery\1.jpg" />
+    <Content Include="app\static\images\gallery\10.jpg" />
+    <Content Include="app\static\images\gallery\2.jpg" />
+    <Content Include="app\static\images\gallery\3.jpg" />
+    <Content Include="app\static\images\gallery\4.jpg" />
+    <Content Include="app\static\images\gallery\5.jpg" />
+    <Content Include="app\static\images\gallery\6.jpg" />
+    <Content Include="app\static\images\gallery\7.jpg" />
+    <Content Include="app\static\images\gallery\8.jpg" />
+    <Content Include="app\static\images\gallery\9.jpg" />
+    <Content Include="app\static\images\kanta.png" />
+    <Content Include="app\static\images\leaf.png" />
+    <Content Include="app\static\images\leafstem.png" />
+    <Content Include="app\static\images\leaves.png" />
+    <Content Include="app\static\images\leavesdropshadow.jpg" />
+    <Content Include="app\static\images\leavesdropshadow.png" />
+    <Content Include="app\static\images\logo.cdr" />
+    <Content Include="app\static\images\logowithcarrotblack.png" />
+    <Content Include="app\static\images\logowithcarrotcolor.png" />
+    <Content Include="app\static\images\male_avtar.png" />
+    <Content Include="app\static\images\margherita.jpg" />
+    <Content Include="app\static\images\mcdonalds.jpg" />
+    <Content Include="app\static\images\mcdonalds.png" />
+    <Content Include="app\static\images\mcspicy.jpg" />
+    <Content Include="app\static\images\mcveggie.jpg" />
+    <Content Include="app\static\images\mcveggie.png" />
+    <Content Include="app\static\images\New folder\sliderphoto1.jpeg" />
+    <Content Include="app\static\images\New folder\sliderphoto2.jpg" />
+    <Content Include="app\static\images\New folder\sliderphoto3.jpeg" />
+    <Content Include="app\static\images\New folder\sp4.jpg" />
+    <Content Include="app\static\images\New folder\sp5.jpg" />
+    <Content Include="app\static\images\New folder\sp6.jpg" />
+    <Content Include="app\static\images\New folder\sp7.jpg" />
+    <Content Include="app\static\images\orderplaced.png" />
+    <Content Include="app\static\images\owdkzeyh78ckk5xsaezi.jpg" />
+    <Content Include="app\static\images\paneertikka.jpg" />
+    <Content Include="app\static\images\peppipaneer.jpg" />
+    <Content Include="app\static\images\pizza.jpg" />
+    <Content Include="app\static\images\png-cutlery-household-silver-fork-fork-plate-black-and-white-tableware-spoon-clipart.png" />
+    <Content Include="app\static\images\shape-11.png" />
+    <Content Include="app\static\images\shape-4.png" />
+    <Content Include="app\static\images\shape-header.png" />
+    <Content Include="app\static\images\shape-header1.png" />
+    <Content Include="app\static\images\sliderphoto1.jpeg" />
+    <Content Include="app\static\images\sliderphoto2.jpg" />
+    <Content Include="app\static\images\sliderphoto3.jpg" />
+    <Content Include="app\static\images\sp4.jpg" />
+    <Content Include="app\static\images\sp5.jpg" />
+    <Content Include="app\static\images\sp6.jpg" />
+    <Content Include="app\static\images\subway.jpg" />
+    <Content Include="app\static\images\subway.png" />
+    <Content Include="app\static\images\sweet.jpg" />
+    <Content Include="app\static\images\wooden-spoon-fork-knife-spoon-png-clip-art-thumbnail.png" />
+    <Content Include="app\static\js\bootstrap.bundle.min.js" />
+    <Content Include="app\static\js\bootstrap.js" />
+    <Content Include="app\static\js\bootstrap.min.js" />
+    <Content Include="app\static\js\bootstrap4\bootstrap.min.js" />
+    <Content Include="app\static\js\jquery-1.11.2.js" />
+    <Content Include="app\static\js\jquery-1.11.2.min.js" />
+    <Content Include="app\static\js\jquery-1.9.1.js" />
+    <Content Include="app\static\js\jquery-2.2.4.min.js" />
+    <Content Include="app\static\js\jquery-3.3.1.min.js" />
+    <Content Include="app\static\js\jquery-3.4.1.slim.min.js" />
+    <Content Include="app\static\js\jquery-ui-1.10.3.custom.js" />
+    <Content Include="app\static\js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="app\static\js\jquery.min.js" />
+    <Content Include="app\static\js\jquery.validate.js" />
+    <Content Include="app\static\js\jqueryUI.js" />
+    <Content Include="app\static\js\popper.min.js" />
+    <Content Include="app\static\js\post.js" />
+    <Content Include="app\static\js\register.js" />
+    <Content Include="app\templates\app\about.html" />
+    <Content Include="app\templates\app\base.html" />
+    <Content Include="app\templates\app\cart.html" />
+    <Content Include="app\templates\app\gallery.html" />
+    <Content Include="app\templates\app\home.html" />
+    <Content Include="app\templates\app\lastorders.html" />
+    <Content Include="app\templates\app\mail.html" />
+    <Content Include="app\templates\app\menu.html" />
+    <Content Include="app\templates\app\restaurants.html" />
+    <Content Include="app\templates\app\signup.html" />
+    <Content Include="app\templates\app\login.html" />
+    <Content Include="app\templates\app\userprofile.html" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\migrations\" />
+    <Folder Include="app\static\" />
+    <Folder Include="app\static\css\" />
+    <Folder Include="app\static\css\bootstrap4\" />
+    <Folder Include="app\static\images\" />
+    <Folder Include="app\static\images\gallery\" />
+    <Folder Include="app\static\images\New folder\" />
+    <Folder Include="app\static\js\" />
+    <Folder Include="app\static\js\bootstrap4\" />
+    <Folder Include="app\templates\" />
+    <Folder Include="app\templates\app\" />
+    <Folder Include="FitFoodie\" />
+    <Folder Include="media\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.7</Version>
+      <Description>env (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

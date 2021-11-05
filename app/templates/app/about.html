@@ -1,0 +1,113 @@
+﻿{% extends 'app/base.html'%}
+
+{% block title %}
+    About
+{% endblock %}
+
+{% block style %}
+
+    <link rel="stylesheet" href="../../static/css/about.css"/>
+
+{% endblock%}
+
+{% block body %}
+<!------------------------------------------------------------------------------------------------>
+
+            <section id="welcomeHeading" class="heading heading-1 pb-0" style="background-image: url(../../static/images/bgblack.jpg);background-attachment: fixed;background-position: center;background-size: cover;">
+                <div class="container">
+                    <div class="row clearfix">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="text--center">
+                                <p class="heading--subtitle">Hello Customer!</p>
+                                <h2 class="heading--title mb-0">Welcome To FitFoodie</h2>
+                                <div class="divider--shape-4 text--center container-fluid">
+                                </div>
+                                <p class="heading--desc">DON'T EAT LESS, EAT RIGHT ! <br>
+                                    FitFoodie is a plateform where we will deliever the food of your choice and that to by your calorie specifications.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- .col-md-8 end -->
+                    </div>
+                    <!-- .row end -->
+                </div>
+                <!-- .container end -->
+                <div class="container linkcontainer">
+                    <ol class="breadcrumb justify-content-center">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li class="active">Our Story</li>
+                    </ol>
+                </div>
+
+                <div class="container aboutcontainer">
+                    <div class="aboutinfocontainer">
+                        <h3 class="heading-about">About Us</h3>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 aboutcontent">
+                                    <p>
+                                        FitFoodie is an indian food ordering and delievery plateform. Along with food delievery we also help you check your calorie count of the food time you are ordering.
+                                        <br><br>
+                                        FitFoodie helps you find and order food from wherever you are. How it works:<br>
+                                        <br>
+                                        You type in an address, we gave you categories underlining with their calorie amount, we tell you the restaurant that deliever to that locale.<br>
+                                        <br>
+                                        Want to be more specific?
+                                        <br>
+                                        <br>
+                                        Search According to cuisine, restaurant name, menu item or calorie count.<br>
+                                        We will filter your results accordingly. You can place your order online or by phone, free of charge.<br>
+                                        <br>
+                                        Oh! and we also give you access to reviews, coupons, special deals, and 24/7 customer care team and Nutritionist team that specify each order and make sure you get exactly what you want.
+                                    </p>
+                                </div>
+                                <br>
+                            </div>
+                    </div>
+                    <br>
+                        <div class="container">
+                            <hr style="color: black;"><br>
+                            <h3 class="heading-about">Our Values</h3>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 aboutvaluescards">
+                                    <h4>Resilience</h4>
+                                    <p>We push ourselves beyond our abilities when faced with tough times. When we foresee uncertainty, we address it only with flexibility.</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 aboutvaluescards">
+                                    <h4>Acceptance</h4>
+                                    <p>Feedback is never taken personally, we break it into positive pieces and strive to work on each and every element even more effectively.</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 aboutvaluescards">
+                                    <h4>Ownership</h4>
+                                    <p>People here don’t work ‘for’ FitFoodie, they work ‘with’ FitFoodie. We treat every problem as our own, take accountability and drive the change.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 aboutvaluescards">
+                                    <h4>Humility</h4>
+                                    <p>We push ourselves beyond our abilities when faced with tough times. When we foresee uncertainty, we address it only with flexibility.</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 aboutvaluescards">
+                                    <h4>Spark</h4>
+                                    <p>We believe in, stand for and are evangelists of our culture - both, within FitFoodie and externally with all our stakeholders.</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 aboutvaluescards">
+                                    <h4>Judgement</h4>
+                                    <p>It’s not our abilities that show who we truly are - it’s our choices. We aim to get these right, at least in the majority of the cases.</p>
+                                </div>
+                                
+                            </div>
+                            <hr style="color: black;">
+                        </div>
+                        <br><br>
+                        <p class="heading--des--about text--center"><b>DON'T EAT LESS, EAT RIGHT ! </b><br>
+                        </p><br>
+                        <br><br>
+                        <h5 class="thankyouheading text--right">Thankyou</h5><br>
+                        
+                </div>
+
+            </section>
+<!-------------------------------------------------------------------------------------------->
+
+{% endblock %}

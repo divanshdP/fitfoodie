@@ -1,0 +1,65 @@
+﻿{% extends 'app/base.html'%}
+{% block title %}Last Orders{% endblock %}
+
+    {% block style %}
+        <link rel="stylesheet" href="/../../static/css/cart.css">
+        {% load crispy_forms_tags %}
+    {% endblock %}
+
+{% block body %}
+
+            <section style="background-image: url(/../../static/images/bgloginblack.jpg);background-attachment: fixed;background-position: center;background-size: cover;">
+                <div class="container">
+                    <div class="rowpad row">
+                        <div class="col-md-8 mx-auto">
+                            <div class="cart-container">
+                                <div class="row justify-content-center first">
+                                    <div class="col-md-12 col-xs-12 col-sm-12">
+                                        <div class="heading text--center">
+                                            <h1 style="font-family: 'Kaushan Script', cursive;">Last Orders</h1>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12">
+                                        {% if records %}
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Order Id</th>
+                                                        <th>Order Date</th>
+                                                        <th>Delievery Address</th>
+                                                        <th>Contact No.</th>
+                                                        <th>Status</th>
+                                                    </tr>
+                                                </thead>
+
+                                                {% for x in records %}
+                                                    <tr>
+                                                        <td>{{ x.order_id }}</td>
+                                                        <td>{{ x.order_date }}</td>
+                                                        <td>{{ add }}</td>
+                                                        <td>{{ contact }}</td>
+                                                        <td>Delievered</td>
+                                                    </tr>
+                                                {% endfor %}
+                                            </table>
+                                            <br /><br />
+                                            <div class="btncont justify-content-center">
+                                                <a href="{% url 'userprofile' %}"><button id="checkoutbtn" class="btn btn-danger" type="submit">Profile<i style="color:white;"  class="fa fa-shopping-cart fontstyle" ></i></button></a>
+                                            </div>
+                                        {% else %}
+                                            <br /><br />
+                                            <div class="container text--center">
+                                                <img src="/../../static/images/empty_state.png" height="auto" width="auto" />
+                                            </div>
+                                            <br /><br />
+                                        {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+{% endblock %}

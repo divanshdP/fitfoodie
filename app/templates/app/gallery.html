@@ -1,0 +1,115 @@
+﻿{% extends 'app/base.html'%}
+{% block title %}Gallery{% endblock %}
+
+    {% block style %}
+        <link rel="stylesheet" href="../../static/css/gallery.css"/>
+    {% endblock %}
+
+
+{% block body %}
+
+            <section id="welcomeHeading" class="heading heading-1 pb-0" style="background-image: url(../../static/images/bggalleryblack.jpg);background-attachment: fixed;background-position: center;background-size: cover;">
+                <div class="container">
+                    <div class="row clearfix">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="text--center">
+                                <p class="heading--subtitle">Memories</p>
+                                <h2 class="heading--title mb-0">Our Gallery</h2>
+                            </div>
+                        </div>
+                        <!-- .col-md-8 end -->
+                    </div>
+                    <!-- .row end -->
+                </div>
+                <!-- .container end -->
+                <div class="container linkcontainer">
+                    <ol class="breadcrumb justify-content-center">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li class="active">Gallery</li>
+                    </ol>
+                </div>
+                <div class="divider--shape-1down">
+                </div>
+                <div class="container-fluid gallerycontainer">
+                    <div class="row">
+                        <div class="photocards">
+                            <div class="portfolio-img">
+                                <img src="../../static/images/gallery/1.jpg">
+                            </div>
+                        </div>
+                        <div class="photocards">
+                            <div class="portfolio-img">
+                                <img src="../../static/images/gallery/2.jpg">
+                            </div>
+                        </div>
+                        <div class="photocards">
+                            <div class="portfolio-img">
+                                <img src="../../static/images/gallery/3.jpg">
+                            </div>
+                        </div>
+                        <div class="photocards">
+                            <div class="portfolio-img">
+                                <img src="../../static/images/gallery/4.jpg">
+                            </div>
+                        </div>
+                        <div class="photocards">
+                            <div class="portfolio-img">
+                                <img src="../../static/images/gallery/5.jpg">
+                            </div>
+                        </div>
+                        <div class="photocards">
+                            <div class="portfolio-img">
+                                <img src="../../static/images/gallery/6.jpg">
+                            </div>
+                        </div>
+                        <div class="photocards">
+                            <div class="portfolio-img">
+                                <img src="../../static/images/gallery/7.jpg">
+                            </div>
+                        </div>
+                        <div class="photocards">
+                            <div class="portfolio-img">
+                                <img src="../../static/images/gallery/8.jpg">
+                            </div>
+                        </div>
+                        <div class="photocards">
+                            <div class="portfolio-img">
+                                <img src="../../static/images/gallery/9.jpg">
+                            </div>
+                        </div>
+                        <div class="photocards">
+                            <div class="portfolio-img">
+                                <img src="../../static/images/gallery/10.jpg">
+                            </div>
+                        </div>
+                        <div class="photocards">
+                            <div class="portfolio-img">
+                                <img src="../../static/images/gallery/1.jpg">
+                            </div>
+                        </div>
+                        <div class="photocards">
+                            <div class="portfolio-img">
+                                <img src="../../static/images/gallery/2.jpg">
+                            </div>
+                        </div>
+                        <div class="photocards">
+                            <div class="portfolio-img">
+                                <img src="../../static/images/gallery/5.jpg">
+                            </div>
+                        </div>
+                        <div class="photocards">
+                            <div class="portfolio-img">
+                                <img src="../../static/images/gallery/4.jpg">
+                            </div>
+                        </div>
+                        <div class="photocards">
+                            <div class="portfolio-img">
+                                <img src="../../static/images/gallery/3.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+{% endblock %}

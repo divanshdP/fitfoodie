@@ -1,0 +1,72 @@
+﻿{% extends 'app/base.html'%}
+
+{% block title %}User Profile{% endblock %}
+
+    {% block style %}
+        <link rel="stylesheet" href="../../static/css/userprofile.css">
+        {% load crispy_forms_tags %}
+        {% load static %}
+    {% endblock %}
+
+{% block body %}
+
+            <section style="background-image: url(../../static/images/bgloginblack.jpg);background-attachment: fixed;background-position: center;background-size: cover;">
+                <div class="container">
+                    <div class="rowpad row">
+                        <div class="col-md-8 mx-auto">
+                            {% if messages %}
+                                {% for message in messages %}
+                                    {% if message.tags == "error" %}
+                                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                            <strong>{{message}}</strong>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                              
+                            <div class="profileform">
+                                <div class="form-container">
+                                    <div class="heading text--center">
+                                        <h1 style="font-family: 'Kaushan Script', cursive;">Profile</h1>
+                                    </div>
+                                    <form name="userprofile" action="/logout/" method="post" novalidate="novalidate">
+                                        {% csrf_token %}
+                                        <div class="row justify-content-center">
+                                            <div class="justify-content-center">
+                                                {% for x in records %}
+                                                <div class="card cardstyle" style="width:400px">
+                                                    {% if x.cust_gender == 'Male' %}
+                                                        <img class="card-img-top" src="../../static/images/male_avtar.png" alt="Male" style="width:100%">
+                                                    {% elif x.cust_gender == 'Female' %}
+                                                        <img class="card-img-top" src="../../static/images/female_avtar.png" alt="Female" style="width:100%">
+                                                    {% endif %}
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">{{x.cust_name}}</h6>
+                                                        <h6>Email : {{x.cust_email}}</h6>
+                                                        <h6>Contact Number : {{x.cust_phone}}</h6>
+                                                        <h6>Gender : {{x.cust_gender}}</h6>
+                                                        <h6>Address : {{x.cust_address}}</h6>
+                                                    </div>
+                                                </div>
+                                                {% endfor %}
+                                                <br /><br />
+                                                <div class="text--center">
+                                                    <a href="{% url 'lastorders' %}"><button id="lastorders" type="button" class="btn btn-info">Last Orders</button></a>
+                                                    <button id="logout" type="submit" class="btn btn-danger">Logout</button>
+                                                    <hr style="color:black" />
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+{% endblock %}

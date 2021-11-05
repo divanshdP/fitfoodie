@@ -1,0 +1,126 @@
+﻿{% extends 'app/base.html'%}
+
+{% block title %}
+    Menu
+{% endblock %}
+
+{% block style %}
+
+    <link rel="stylesheet" href="/../../static/css/menu.css"/>
+
+{% endblock%}
+
+{% block body %}
+        <section id="welcomeHeading" class="heading heading-1 pb-0" style="background-image: url(/../../static/images/bgblack.jpg);background-attachment: fixed;background-position: center;background-size: cover;">
+                        <div class="container">
+                            <div class="row clearfix">
+                                <div class="col-xs-12 col-sm-12">
+                                    <div class="text--center">
+                                        <p class="heading--subtitle">Discover</p>
+                                        <h2 class="title--heading mb-0">Our Menu</h2>
+                                    </div>
+                                </div>
+                                <!-- .col-md-8 end -->
+                            </div>
+                            <!-- .row end -->
+                        </div>
+                        <!-- .container end -->
+                        <div class="container linkcontainer">
+                            <ol class="breadcrumb justify-content-center">
+                                <li><a href="{% url 'home' %}">Home</a></li>
+                                <li><a href="{% url 'menu' %}">Menu</a></li>
+                            </ol>
+                        </div>
+                        <div class="divider--shape-1down">
+                        </div>
+                        <section id="menuGrid" class="bg-white">
+                            <div class="container">
+                                <div class="row clearfix">
+                                    <div class="col-xs-12 col-sm-12">
+                                        <div class="heading heading-1 mb-50 text--center">
+                                            <p class="heading--subtitle">Taste the best</p>
+                                            <h2 class="heading--title mb-0">Fresh Ingredient, Tasty Meals</h2>
+                                            <div class="divider--shape-4"></div>
+                                            <p class="heading--desc">Everyone has taste, even if they don't realize it. Even if you're not a great chef, there's nothing to stop you understanding the difference between what tastes good and what doesn't.</p>
+                                        </div>
+                                    </div>
+                                    <!-- .col-md-8 end -->
+                                </div>
+                                <!-- .row end -->
+                            </div>
+                            <!-- .container end -->
+                        </section>
+                        
+                        <section class="bg-white">
+                            <div class="container">
+                                <div class="row clearfix">
+                                    <div class="col-xs-12 col-sm-12">
+                                        <!-- Nav tabs -->
+                                        <ul class="nav nav-tabs justify-content-center">
+                                            <li class="padding"><a href='/menu/burgers/'>Burgers</a></li>
+                                            <li class="padding"><a href='/menu/sweets/'>Sweets</a></li>
+                                            <li class="padding"><a href='/menu/drinks/'>Drinks</a></li>
+                                            <li class="padding"><a href='/menu/pizzas/'>Pizza's</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="container menu">
+                                        {% if messages %}
+                                            {% for message in messages %}
+                                                {% if message.tags == "success" %}
+                                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                        <strong>{{message}}</strong>
+                                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                {% endif %}
+                                                {% if message.tags == "error" %}
+                                                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                            <strong>{{message}}</strong>
+                                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                {% endif %}
+                                            {% endfor %}
+                                        {% endif %}
+                                        <div class="row clearfix">
+                                            <div class="col-xs-12 col-sm-12">
+                                                <table class="table table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>Name</th>
+                                                            <th>Calories</th>
+                                                            <th>Category</th>
+                                                            <th>Restaurant</th>
+                                                            <th>Price</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    {% for x in records %}
+                                                        <tr>
+                                                            <td data-id="{{x.item_id}}" data-type="item_logo"><img src="{{x.item_logo.url}}" width="50px" height="50px" /></td>
+                                                            <td data-id="{{x.item_id}}" data-type="item_name">{{ x.item_name }}</td>
+                                                            <td data-id="{{x.item_id}}" data-type="item_calories">{{ x.item_calories }}</td>
+                                                            <td data-id="{{x.item_id}}" data-type="item_category">{{ x.item_category }}</td>
+                                                            <td data-id="{{x.item_id}}" data-type="item_rest_id">{{ x.item_rest_id }}</td>
+                                                            <td data-id="{{x.item_id}}" data-type="item_price">{{ x.item_price }}</td>
+                                                            <td data-id="{{x.item_id}}" data-type="cart_button"><a href="{% url 'addtocart' id=x.item_id %}"><button id="cartbutton" type="submit" class="btn btn-success">Add to Cart <i class="fas fa-cart-plus"></i></button></a></td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                </table>
+                                                <br /><br />
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+        </section>
+
+{% endblock %}

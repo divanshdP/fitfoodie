@@ -1,0 +1,58 @@
+﻿{% extends 'app/base.html'%}
+{% block title %}Feedback{% endblock %}
+
+    {% block style %}
+        <link rel="stylesheet" href="/../../static/css/mail.css">
+        {% load crispy_forms_tags %}
+    {% endblock %}
+
+{% block body %}
+            <section style="background-image: url(/../../static/images/bgloginblack.jpg);background-attachment: fixed;background-position: center;background-size: cover;">
+                <div class="container">
+                    <div class="rowpad row">
+                        <div class="col-md-8 mx-auto">
+                            {% if messages %}
+                                {% for message in messages %}
+                                    {% if message.tags == "success" %}
+                                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                            <strong>{{message}}</strong>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    {% endif %}
+                                    {% if message.tags == "error" %}
+                                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                <strong>{{message}}</strong>
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                            <div class="firstform">
+                                <div class="mail-container">
+                                    <div class="heading text--center">
+                                        <h1 style="font-family: 'Kaushan Script', cursive;">Reach Us !</h1>
+                                    </div>
+                                    <form name="mail" action="/feedback/" method="post" novalidate="novalidate">
+                                        {% csrf_token %}
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-8">
+                                                <p class="heading--desc">You can give your reviews and feedbacks at FitFoodievs@gmail.com</p>
+                                                    <hr style="color:black" />
+                                                    <br />
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            
+
+{% endblock %}
